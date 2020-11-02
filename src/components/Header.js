@@ -27,7 +27,7 @@ function Header() {
 						</div>
 					</div>
 					<nav className="Header__site-nav-profile-nav">
-						<Link class="signin" to="/signup">
+						<Link class="signin" to="/signin">
 							Sign In
 						</Link>
 						<Link to="/">
