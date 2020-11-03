@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.scss";
 import { Link } from "react-router-dom";
 import Logo from "../assets/logo.jpg";
-import { User, ShoppingCart } from "react-feather";
+import { User, ShoppingCart, Menu, X } from "react-feather";
 
 function Header() {
+	const [menuOpen, setMenuOpen] = useState(false);
+
 	return (
 		<header className="Header">
 			<nav className="Header__site-map">
@@ -27,7 +29,7 @@ function Header() {
 						</div>
 					</div>
 					<nav className="Header__site-nav-profile-nav">
-						<Link class="signin" to="/signin">
+						<Link className="signin" to="/signin">
 							Sign In
 						</Link>
 						<Link to="/">
@@ -36,11 +38,18 @@ function Header() {
 						<Link to="/">
 							<ShoppingCart color="black" />
 						</Link>
+						<Link className="menu" onClick={() => setMenuOpen(!menuOpen)}>
+							<Menu color="black" />
+						</Link>
 					</nav>
 				</div>
 			</div>
-			<nav className="Header__nav">
+			<nav className={"Header__nav" + (menuOpen ? " open" : "")}>
 				<div className="container">
+					<X
+						className="Header__nav-close-btn"
+						onClick={() => setMenuOpen(false)}
+					/>
 					<Link to="/">Christmas</Link>
 					<Link to="/">Home & Garden</Link>
 					<Link to="/">Furniture & Lights</Link>

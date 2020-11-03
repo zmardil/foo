@@ -75,6 +75,9 @@
 				font-weight: 500;
 				align-self: center;
 			}
+			.menu {
+				display: none;
+			}
 		}
 	}
 	&__logo {
@@ -85,19 +88,60 @@
 	&__nav {
 		border-top: 1px solid #d8d8d8;
 		border-bottom: 1px solid #d8d8d8;
+		&-close-btn {
+			display: none;
+		}
 		.container {
 			display: flex;
 			justify-content: space-between;
 			margin-bottom: -1px;
 		}
 		a {
-			font-size: 0.8em;
 			text-decoration: none;
 			color: inherit;
 			transition: border 0.5s ease;
 			padding: 10px 0;
 			&:hover {
 				border-bottom: 1px solid #000;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+	.Header {
+		&__site-nav {
+			&-profile-nav {
+				grid-template: 25px / auto repeat(3, 25px);
+				.menu {
+					display: inline-block;
+				}
+			}
+		}
+		&__nav {
+			display: none;
+		}
+		&__nav.open {
+			border: none;
+			display: block;
+			position: absolute;
+			z-index: 2;
+			background: #fff;
+			top: 0;
+			right: 0;
+			padding: 8px;
+			.Header__nav-close-btn {
+				display: inline;
+			}
+			.container {
+				width: 300px;
+				height: 100vh;
+				display: block;
+				margin: 0;
+			}
+			a {
+				border-bottom: 1px solid #d8d8d8;
+				display: block;
 			}
 		}
 	}

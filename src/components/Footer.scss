@@ -44,7 +44,7 @@
 	&__nav {
 		border-top: 1px solid #d8d8d8;
 		&-wrapper {
-			padding: (8px * 6) 0;
+			padding: 8px * 6 8px * 2;
 			column-count: 4;
 			column-gap: 24px;
 			// display: grid;
@@ -100,6 +100,36 @@
 			padding: (8px * 2) 0;
 			text-align: center;
 			font-size: 0.8rem;
+		}
+	}
+}
+
+@media only screen and (max-width: 1300px) {
+	.Footer {
+		&__nav {
+			&-wrapper {
+				column-count: 3;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 770px) {
+	.Footer {
+		&__nav {
+			&-wrapper {
+				column-count: 2;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.Footer {
+		&__nav {
+			&-wrapper {
+				column-count: auto;
+			}
 		}
 	}
 }
