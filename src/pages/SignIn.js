@@ -24,7 +24,7 @@ function SignIn() {
 				<hr />
 				<div className="create-account">
 					<h3>Don't have an account?</h3>
-					<button>Create an account</button>
+					<Link to="/signup">Create an account</Link>
 				</div>
 			</section>
 		</main>

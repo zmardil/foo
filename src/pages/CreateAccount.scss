@@ -1,4 +1,4 @@
-.SignIn {
+.CreateAccount {
 	&__title {
 		border-bottom: 1px solid #d8d8d8;
 		text-align: center;
@@ -45,20 +45,15 @@
 	a,
 	p {
 		color: inherit;
-		text-align: center;
 	}
 	p {
 		font-size: 0.9rem;
-	}
-	.fyp-link {
-		display: block;
-		margin-bottom: 2rem;
 	}
 	hr {
 		margin: 2rem 0;
 		border: 1px solid #d8d8d8;
 	}
-	.create-account {
+	.signin {
 		h3 {
 			font-size: 1.4rem;
 			font-weight: 300;
